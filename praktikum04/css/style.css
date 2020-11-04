@@ -1,0 +1,355 @@
+/* index */
+*{
+    padding:0;
+    margin: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    padding: 6px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgba(129, 87, 24, 0.808);
+    background-size: cover;
+    float: inherit;
+    color: lightyellow;
+    text-align: center;
+}
+.daftar{
+    padding:1px 0;
+    background-color: #ffffff;
+    text-decoration:none ;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.daftar ul li {
+    display: inline-block; 
+    text-decoration: none;
+    margin-right: 10px;
+}
+header ul li a{
+    padding: 10px 10px;
+    display: inline-block
+}
+header ul li a:hover{
+    background-color:rgb(201, 161, 102);
+}
+.active{
+    background-color: rgb(201, 161, 102);
+    color: lightyellow;
+}
+.banner1 {
+    height: 80vh;
+    background-image:url("https://www.filemagz.com/wp-content/uploads/2019/11/MONKEY-TAIL-CAFE.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner1 h2{
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-size: 800%;
+}
+.banner1 ::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(172, 118, 37, 0.6);
+}
+section{
+    padding: 50px 0;
+}
+section h2{
+    text-align: center;
+    padding: 20px 0;
+    color:rgba(172, 118, 37); ;
+}
+.about p{
+    word-spacing: 2px;
+    line-height: 30px;
+    text-align: center;
+    font-style: normal;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.promo{
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align:"center";
+}
+h2{
+    color:rgba(172, 118, 37); ;
+    padding: 30px;
+    text-align: center;
+}
+.kotak{
+    font-family: sans-serif;
+    border-collapse: collapse;
+    color: black;
+    width: 100%;
+    border: black;
+    margin-top: 20px;
+}
+.kotak th {
+    background: rgba(172, 118, 37);
+    color: #fff ;
+    font-weight: normal;
+}
+.kotak th, td{
+    padding: 8px 20px;
+    text-align: center;
+}
+.kotak tr:nth-child(even){
+    background: rgb(179, 136, 72);
+}
+.paket{
+    font-family: sans-serif;
+    border-collapse: collapse;
+    color: black;
+    width: 100%;
+    border: black;
+    margin-top: 40px;
+}
+.paket th {
+    background: rgba(172, 118, 37);
+    color: #fff ;
+    font-weight: normal;
+}
+.paket th, td{
+    padding: 8px 20px;
+    text-align: center;
+}
+.paket tr:nth-child(even){
+    background: rgb(179, 136, 72);
+}
+
+/*CABANG*/
+.cabang li{
+    text-align: center;
+}
+.cp p{
+    color: rgba(172, 118, 37) ;
+    text-align: center;
+}
+
+/* fasilitas */
+body{
+    background-color: moccasin;
+}
+h1{
+    padding: 6px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgba(129, 87, 24, 0.808);
+    background-size: cover;
+    float: inherit;
+    color: lightyellow;
+    text-align: center;
+}
+.banner2 {
+    height: 80vh;
+    background-image:url("https://kerincitime.co.id/wp-content/uploads/2020/06/DF.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner2 h2{
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-size: 800%;
+}
+.banner2 :after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(172, 118, 37, 0.6);
+}
+.fasilitas li{
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+}
+.a{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+}
+.b{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 350px;
+    height: 250px;
+}
+.c{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 350px;
+    height: 250px;
+}
+.d{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 350px;
+    height: 350px;
+}
+.e{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 350px;
+    height: 250px;
+}
+
+/*GALLERY*/
+h1{
+    padding: 6px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgba(129, 87, 24, 0.808);
+    background-size: cover;
+    float: inherit;
+    color: lightyellow;
+    text-align: center;
+}
+.banner3 {
+    height: 80vh;
+    background-image:url("https://www.javatravel.net/wp-content/uploads/2020/08/Cafe-Surabaya.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner3 h2{
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-size: 800%;
+}
+.banner3 :after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(172, 118, 37, 0.6);
+}
+img{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    margin-left: 90px;
+    margin-top: 40px;
+    border: 4px white;
+}
+
+/*MENU*/
+h1{
+    padding: 6px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgba(129, 87, 24, 0.808);
+    background-size: cover;
+    float: inherit;
+    color: lightyellow;
+    text-align: center;
+}
+.banner4 {
+    height: 80vh;
+    background-image:url("https://jsp.co.id/wp-content/uploads/2018/11/trik-memotret-makanan.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner4 h2{
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-size: 800%;
+}
+.banner4 :after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(172, 118, 37, 0.6);
+}
+.menu{
+    font-family: sans-serif;
+    border-collapse: collapse;
+    color: black;
+    width: 100%;
+    border: black;
+    margin-top: 50px;
+}
+.menu th {
+    background: rgba(172, 118, 37);
+    color: #fff ;
+    font-weight: normal;
+}
+.menu th, td{
+    padding: 8px 20px;
+    text-align: center;
+}
+.menu tr:nth-child(even){
+    background: rgb(179, 136, 72);
+}
+/*CONTACT PERSON*/
+h1{
+    padding: 6px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgba(129, 87, 24, 0.808);
+    background-size: cover;
+    float: inherit;
+    color: lightyellow;
+    text-align: center;
+}
+.banner5 {
+    height: 80vh;
+    background-image:url("https://cdn.amarbank.co.id/AmarBlog/uploads/2018/11/14212603/Cafe-unik-denpasar.jpeg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner5 h2{
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-size: 600%;
+}
+.banner5 :after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(172, 118, 37, 0.6);
+}
