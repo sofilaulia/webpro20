@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: #c50e29;
+            margin-left: 400px;
+            margin-right: 400px;
+            margin-top: 40px;
+            text-align: center;
+            color: rgb(65, 57, 57);
+        }
+        fieldset{
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0.65);
+        }
+        h1{
+            background-color: #dd3851;
+            color: white;
+        }
+        h2{
+            background-color: #dd3851;
+            color: white;
+        }
+        p{
+            text-align: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <fieldset>
+        <h1>Form Validation</h1>
+        <hr>
+            <form>
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td><input type="text" id="nama" maxlength="30" required></td>
+                    </tr>
+                        <td>Email</td>
+                        <td><input type="email" id="mail" required></td>
+                    </tr>
+                    <tr>
+                        <td>Jam Keberangkatan</td>
+                        <td><input type="time" id="jam" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tujuan Keberangkatan</td>
+                        <td><input type="text" id="tujuan" required></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Tiket</td>
+                        <td><input type="number" id="tiket" min="1"  required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="kirim" id = "tombol" onclick ="tampilkan()"></td>
+                    </tr>
+                </table>
+            </form>
+    </fieldset>
+    <fieldset id="next">
+        <h2 id="box"></h2>
+        <p id="box1"></p>
+        <p id="box2"></p>
+        <p id="box3"></p>
+        <p id="box4"></p>
+        <p id="box5"></p>
+    </fieldset>
+</body>
+    <script>
+        function tampilkan(){
+            let nama = document.getElementById("nama").value;
+            let mail = document.getElementById("mail").value;
+            let jam = document.getElementById("jam").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let tiket = document.getElementById("tiket").value;
+         
+            if (nama != "" && mail != "" && jam != "" && tujuan != "" && tiket >= 1){
+               
+                let text = document.createTextNode('Data Pelanggan ');
+                let text1 = document.createTextNode('Nama: '+ nama);
+                let text2 = document.createTextNode('Email: '+ mail );
+                let text3 = document.createTextNode('Jam keberangkatan: '+ jam );
+                let text4 = document.createTextNode('Tujuan keberangkatan: '+ tujuan );
+                let text5 = document.createTextNode('Jumlah tiket: '+ tiket );
+
+
+                let box = document.getElementById('box');
+                box.appendChild(text);
+                box1.appendChild(text1);
+                box2.appendChild(text2);
+                box3.appendChild(text3);
+                box4.appendChild(text4);
+                box5.appendChild(text5);
+            }
+            else {
+                return false
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            margin-top: 200px;
+            margin-left: 450px;
+            margin-right: 450px;
+            color:black;
+            background-color:#5870cb;
+
+        }
+        fieldset{
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0.65);
+        }
+        h2{
+            background-color:#6273b4;
+            text-align: center;
+            font-style: inherit;
+            color: white;
+        }
+    </style>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login Authentication</title>
+</head>
+<body>
+    <fieldset>
+        <h2>Login Authentication</h2>
+            <hr>
+                <form>
+                    <table style="width: inherit;">
+                        <tr>
+                            <td>Username</td>
+                            <td><input type="text" id="user" placeholder="sofil123"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="password" id="pw" placeholder="hallo"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="login" onclick="validation()"></td>
+                        </tr>
+                    </table>
+                </form>
+    </fieldset>
+</body>
+    <script>
+    function validation(){
+        let user = document.getElementById("user").value;
+        let pw = document.getElementById("pw").value;
+        if (user == "sofil123" && pw == "hallo"){   
+            alert("Login Sukses");
+            return window.location.href = "sukses.html";
+        }
+        else {           
+           return alert("Login Gagal")
+        }
+    }
+    </script>
+</html>    
+
+

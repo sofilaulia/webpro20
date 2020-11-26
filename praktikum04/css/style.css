@@ -83,6 +83,9 @@ section h2{
     line-height: 25px;
     text-align:"center";
 }
+.promo th{
+    color: black;
+}
 h2{
     color:rgba(172, 118, 37); ;
     padding: 30px;
@@ -118,7 +121,7 @@ h2{
 }
 .paket th {
     background: rgba(172, 118, 37);
-    color: #fff ;
+    color: black ;
     font-weight: normal;
 }
 .paket th, td{

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            margin-top: 50px;
+            margin-left: 350px;
+            margin-right: 350px;
+            background-color: #e4dc85;
+        }
+        fieldset{
+            background-color: #ffeb3b;
+            border-radius: 8px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0.65);
+        }
+        h1{
+            text-align: center;
+            font-style: inherit;
+            background-color:rgb(81, 167, 253); ;
+            color:black;
+        }
+        #image{
+            padding-top: 10px;
+            width:100%;
+            height: 100%;
+            position: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <fieldset>
+        <form id="form1">
+            <h1>Pilihan Ikan Hias</h1>
+                <select id="ikan" onchange="pilihan()">
+                    <option value="Ikan nemo">Ikan nemo</option>
+                    <option value="Ikan manfish">Ikan manfish</option>
+                    <option value="Ikan koi">Ikan koi</option>
+                    <option value="Ikan mas koki">Ikan mas koki</option>
+                    <option value="Ikan arwana">Ikan arwana</option>
+                    <option value="Ikan louhan">Ikan louhan</option>
+                    <option value="Ikan cupang">Ikan cupang</option>
+                </select>
+        </form>
+        <img src="image/Ikan nemo.jpg " alt="Ikan nemo" id="image" width="400px" height="280px"/>
+    </fieldset>
+</body>
+    <script>
+        function pilihan(){
+            let list_ikan = document.getElementById("ikan");
+            let idx = list_ikan.selectedIndex;
+            console.log("Ikan hias ke- " + idx + " adalah " + list_ikan[idx].value);
+
+            let area_image = document.getElementById("image");
+            area_image.src = "image/" + list_ikan[idx].value + ".jpg";
+
+            if (idx == "0"){
+                alert("Ini gambar Ikan nemo.jpg");
+            }
+            if (idx == "1"){
+                alert("Ini gambar Ikan manfish.jpg");
+            }
+            if (idx == "2"){
+                alert("Ini gambar Ikan koi.jpg");
+            }
+            if (idx == "3"){
+                alert("Ini gambar Ikan mas koki.jpg");
+            }
+            if (idx == "4"){
+                alert("Ini gambar Ikan arwana.jpg");
+            }
+            if (idx == "5"){
+                alert("Ini gambar Ikan louhan.jpg");
+            }
+            if (idx == "6"){
+                alert("Ini gambar Ikan cupang.jpg");
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="hooh.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" >
+        <tr> 
+            <td><input type="text" id="user" name="user" placeholder="sofil123" required/></td>
+            <td><input type="password" id="pw" name="pw" placeholder="hallo" required/></td>
+            <td>
+                <a href="hooh.html">
+                <button action='submit' onsubmit="validation()" id="submit">Login</button>
+                <p id='akses'></p></tr>
+                </a>
+            </td>
+        </tr>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Chatbox</title>
+    <style>
+        #kotak{
+            font-family: sans-serif;
+            border-collapse: collapse;
+            color: black;
+            width: 100%;
+            border: black;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class ="result">Chat Box</p>
+        <input type="text" class="input">
+        <button class="kirim">Kirim</button>
+    </div>
+
+<script>
+    const input = document.querySelector(".input");
+    const kirim = document.querySelector(".kirim");
+    const chatbox = document.querySelector(".result");
+
+    btnkirim.addEventListener("click", function() {
+        result.innerHTML = "Chat Box" + parseInt(input.value);
+    })
+</script>
+</body>
+</html>

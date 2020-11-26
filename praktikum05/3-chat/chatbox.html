@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Chatbox</title>
+<style>
+    h3 {
+        text-align: center;
+        background-color: slateblue;
+        color: white;
+        font-family: Verdana
+    }
+    #hasil {
+        position: fixed;
+        width: 300px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: 1px 2px 8px rgb(0, 0, 1);
+        padding: 3 px;
+        min-height: 200px;
+        bottom: 10px;
+        right: 10px;
+        background-color: turquoise;
+    }
+    #chat {
+        position: fixed;
+        bottom: 20px;
+        right: 120px;
+    }
+    #tombol {
+        position: fixed;
+        bottom: 20px;
+        right: 80px;
+    }
+    #hapus {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    #kotak{
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <form action="">
+        <div id="hasil" >
+            <h3>Chatbox</h3>
+            <textarea id="kotak" cols="38" rows="13" disabled></textarea>
+        </div>
+        <input type="text" id="chat"><input type="button" value="kirim" onclick ="tampilkan()" id="tombol">
+        <input type="reset" value="Delete" id="hapus">
+    </form>
+</body>
+    <script>
+        function tampilkan(){
+            let chat = document.getElementById("chat").value ;
+            let hasil = document.getElementById("kotak");
+           
+            let text = document.createTextNode(" " + chat + "\n");
+               kotak.appendChild(text) ;
+        }
+    </script>
+</html>
