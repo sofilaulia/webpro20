@@ -19,7 +19,7 @@
         <tr>
             <td>Tempat, Tanggal Lahir</td>
             <td>:</td>
-            <td><?= $pasien->tmpt_lahir ?>, <?= $pasien->tgl_lahir ?></td>
+            <td><?=$pasien->tmp_lahir?>, <?=$pasien->tgl_lahir?></td>
         </tr>
         <tr>
             <td>Email</td>
