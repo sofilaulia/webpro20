@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>cron</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/breadcrumb.css">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- fevicon -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <!-- owl stylesheets -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+    media="screen">
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.993);
+      color: white;
+      text-align: center;
+    }
+
+    .content-breadcrumb {
+      display: flex;
+      justify-content: flex-end;
+      color: rgba(41, 145, 131, 0.993) !important;
+    }
+
+    .field {
+      display: flex;
+      margin-inline-start: 2px;
+      margin-inline-end: 2px;
+      padding-block-start: 0.35em;
+      padding-inline-start: 0.75em;
+      padding-inline-end: 0.75em;
+      padding-block-end: 0.625em;
+      min-inline-size: min-content;
+      border-width: 2px;
+      border-style: groove;
+      border-color: threedface;
+      border-image: initial;
+    }
+
+    .legend {
+      display: block;
+      width: initial;
+      padding-inline-start: 2px;
+      padding-inline-end: 2px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+    }
+
+    .content-input {
+      display: flex;
+    }
+
+    .col-custom {
+      -webkit-box-flex: 0;
+      flex: 0 0 7.666667%;
+      max-width: 7.666667%;
+    }
+
+    .no-border {
+      border: none;
+    }
+
+    .col-6-cstm {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 60%;
+    }
+
+    .max {
+      width: 100%;
+    }
+
+    .content-absolute {
+      position: absolute;
+      top: -4%;
+      left: 74%;
+    }
+
+    .field {
+      color: black;
+    }
+  </style>
+</head>
+<!-- body -->
+
+<body class="about_page">
+  <div class="header_main">
+    <div class="container">
+      <div class="logo">
+        <h1 class="font-weight-bold">
+          Sistem Informasi Seminar Tugas Akhir - SISTA
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="container">
+      <!--  header inner -->
+      <div class="col-sm-12">
+        <div class="menu-area">
+          <nav class="navbar navbar-expand-lg ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index_user.html">HOME
+                    <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal-user.html">JADWAL</a>
+                </li>
+                <li class="#" href="#">
+                  <a class="nav-link" href="daftar-seminar.html">DAFTAR SEMINAR</a>
+                </li>
+                <li class="#" href="#">
+                  <a class="nav-link" href="berita_user.html">BERITA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about_user.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profiluser.html">PROFIL</a>
+                </li>
+                <li class="last"><a href="index.html">LOGOUT</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end header end -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-center">Log In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form" action="index.html">
+            <div class="form-group">
+              <label class="col-form-label">Username</label>
+              <input id="emaillogin" type="text" class="form-control" placeholder=" " name="Name" required="">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Password</label>
+              <input id="pwlogin" type="password" class="form-control" placeholder=" " name="Password" required="">
+            </div>
+            <div class="right-w3l">
+              <button type="submit" class="btn btn-primary">
+                Login
+              </button>
+            </div>
+            <div class="sub-w3l">
+              <div class="custom-control custom-checkbox mr-sm-2">
+                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+              </div>
+            </div>
+            <p class="text-center dont-do mt-3">Don't have an account?
+              <button href="#" class="btn btn-link" data-toggle="modal" data-target="#exampleModal2">
+                Register Now</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="form-group">
+              <label class="col-form-label">Nama</label>
+              <input type="text" class="form-control" placeholder=" " name="Name" required="">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Email</label>
+              <input type="email" class="form-control" placeholder=" " name="Email" required="">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Password</label>
+              <input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Confirm Password</label>
+              <input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2"
+                required="">
+            </div>
+            <div class="right-w3l">
+              <button type="submit" class="btn btn-danger">
+                Register
+              </button>
+            </div>
+            <div class="sub-w3l">
+              <div class="custom-control custom-checkbox mr-sm-2">
+                <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
+                <label class="custom-control-label" for="customControlAutosizing2">I Accept to the Terms &
+                  Conditions</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--services start -->
+  <div class="about_main">
+    <div class="services_main">
+      <div class="container">
+        <div class="creative_taital">
+          <nav class="flex-ends">
+            <ol class="breadcrumbs">
+              <li class="breadcrumb-item active">
+                <a href="index.html" class="text-dark">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="jadwal-user.html" class="text-dark">Jadwal</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="detail_diego.html" class="text-dark">Detail Jadwal</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#" class="active-a text-dark">Daftar Peserta</a>
+              </li>
+            </ol>
+          </nav>
+          <div>
+            <p style="color: black;">Mahasiswa Seminar &nbsp;: Ahmad Budiman (0102001)</p>
+
+          </div>
+
+          <div>
+            <p style="color: black;">Judul
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+              Hasil Seminar Rancang Bangun Aplikasi Tugas Akhir Berbasis Web Menggunakan MVC Framework</p>
+          </div>
+
+          <div>
+            <p style="color: black;">Waktu Seminar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Senin, 4 Januari
+              2021, 13:00</p>
+          </div>
+          <fieldset class="field">
+            <legend class="legend">Form Peserta Seminar</legend>
+            <div class="col-12">
+              <div class="col-6-cstm p-2">
+                <fieldset>
+                  <form>
+                    <table>
+                      <tr>
+                        <td>Nim </td>
+                        <td><input type="number" name="Nim" id="nim"></td>
+                      </tr>
+                      <tr>
+                        <td>Nama</td>
+                        <td><input type="text" name="Nama" id="nama"></td>
+                      </tr>
+                      <tr>
+                        <td>Prodi </td>
+                        <td><select name="prodi" id="prodi">
+                            <option value="0">-select-</option>
+                            <option value="1">Sistem Informasi</option>
+                            <option value="2">Teknik Informatika</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <td id="program">Program</td>
+                        <td>
+                          <form action="/action_page.php">
+                            <input type="radio" id="D3" class="program_studi" value="D3">
+                            <label for="D3">D3</label>
+                            <r>
+                              <input type="radio" id="S1_Reguler" class="program_studi" value="S1 Reguler">
+                              <label for="S1 Reguler">S1 Reguler</label>
+                              <r>
+                                <input type="radio" id="S1_Fast_Trackt" class="program_studi" value="S1 Fast Trackt">
+                                <label for="S1 Fast Trackt">S1 Fast Trackt</label>
+                                <r>
+                                  <input type="radio" id="S2" class="program_studi" value="S2">
+                                  <label for="S2">S2</label>
+                                  <r>
+                          </form>
+                        </td>
+                      </tr>
+                    </table>
+                    <button type="submit" class="mt-2 btn btn-primary" onclick="return tambahpeserta()">
+                      Daftar
+                    </button>
+                  </form>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!--Contact_section start -->
+      <div class="contact_main">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="touch_text">Kontak Kami</h1>
+            </div>
+          </div>
+        </div>
+        <div class="contact_section_2">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="map_icon">
+                  <img src="image/nf_again.jpg" style="max-width: 50%;padding-left: 30px; ">
+                  <p class="">
+                    Jl. Raya Lenteng Agung No.20, RT.4/RW.1, Srengseng Sawah, 
+                    Kec. Jagakarsa, Kota Jakarta Selatan, DKI Jakarta 12640
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="map_icon">
+                  <img src="image/tilpun.png" style="max-width: 50%;padding-left: 30px;">
+                  <p >+62 857 1624 3174</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="map_icon">
+                  <img src="image/stt_again.jpg" style="max-width: 50%; padding-left: 30px;">
+                  <p >info@nurulfikri.ac.id</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Contact_section end -->
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <p class="copyright_text">© 2020 SISTA. All rights reserved | Design by Kelompok 2
+                  <a href="https://html.design">
+                    Mahasiswa STT NF</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Javascript files-->
+  <script src="verification.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function tambahpeserta() {
+      let nim = document.getElementById("nim").value;
+      let nama = document.getElementById("nama").value;
+      let prodi = document.getElementById("prodi").value;
+      let program = document.getElementsByClassName("program_studi");
+
+      // Checked kondisi
+      let programValue = false;
+      for (let i = 0; i < program.length; i++) {
+        if (program[i].checked == true) {
+          programValue = true;
+        }
+      }
+
+      if (nim == "" || nama == "" || prodi == "") {
+        alert("Anda harus mengisi semua data terlebih dahulu");
+        return true;
+      }
+
+      else if (!programValue) {
+        alert("Anda belum memilih program studi");
+        return false;
+      }
+
+      else {
+        alert("Berhasil daftar");
+        location.reload();
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
